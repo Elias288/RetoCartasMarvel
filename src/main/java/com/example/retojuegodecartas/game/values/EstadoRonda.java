@@ -3,30 +3,30 @@ package com.example.retojuegodecartas.game.values;
 import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
-import java.util.Set;
 
-public class Mazo implements ValueObject<Set<Carta>> {
-    private final Set<Carta> value;
+public class EstadoRonda implements ValueObject<EstadoRondaType> {
 
-    public Mazo(Set<Carta> cartas) {
-        this.value = cartas;
+    private final EstadoRondaType estado;
+
+    public EstadoRonda(EstadoRondaType estado) {
+        this.estado = estado;
     }
 
     @Override
-    public Set<Carta> value(){
-        return this.value;
+    public EstadoRondaType value() {
+        return estado;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Mazo mazo = (Mazo) o;
-        return Objects.equals(value, mazo.value);
+        EstadoRonda that = (EstadoRonda) o;
+        return estado == that.estado;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(value);
+        return Objects.hash(estado);
     }
 }

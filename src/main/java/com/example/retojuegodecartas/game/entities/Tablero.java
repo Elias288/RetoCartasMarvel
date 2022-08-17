@@ -1,6 +1,8 @@
 package com.example.retojuegodecartas.game.entities;
 
 import co.com.sofka.domain.generic.Entity;
+import com.example.retojuegodecartas.game.values.Carta;
+import com.example.retojuegodecartas.game.values.Ronda;
 import com.example.retojuegodecartas.game.values.TableroId;
 
 import java.util.Set;
